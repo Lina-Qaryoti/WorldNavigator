@@ -156,5 +156,7 @@ public class Player {
         trading.Buy(itemNum,this,(Seller)currentRoom.getSide(playerOrientation));
     }
 
+
+    //rest of commands here
     
 }
