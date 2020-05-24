@@ -1,12 +1,10 @@
 package com.worldNavigator.mapBuilder;
 
 import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.Key;
 import com.worldNavigator.Trade;
 import com.worldNavigator.mapObjects.Room;
 
 import java.security.InvalidParameterException;
-import java.util.HashMap;
 
 public class Map {
 

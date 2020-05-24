@@ -1,7 +1,6 @@
 package com.worldNavigator.mapBuilder;
 
 import com.worldNavigator.*;
-import com.worldNavigator.Items.Item;
 
 public interface MapBuilder {
 

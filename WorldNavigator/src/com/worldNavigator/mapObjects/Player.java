@@ -4,6 +4,7 @@ import com.worldNavigator.Direction;
 import com.worldNavigator.Items.Flashlight;
 import com.worldNavigator.Items.Inventory;
 import com.worldNavigator.Items.Item;
+import com.worldNavigator.Items.Key;
 import com.worldNavigator.Trade;
 
 import java.util.List;
@@ -13,6 +14,8 @@ public class Player {
     private Room currentRoom;
     private Direction playerOrientation;
     private double gold;
+    private Inventory playerInventory= new Inventory();
+    private Trade trading;
 
     public double getGold() {
         return gold;
@@ -26,8 +29,7 @@ public class Player {
         return playerInventory;
     }
 
-    private Inventory playerInventory= new Inventory();
-    private Trade trading;
+
 
     public int getCurrentRoom() {
         return currentRoom.getRoomNo();
@@ -60,11 +62,15 @@ public class Player {
 
     public void moveForward(){
         MapObjects obj= currentRoom.getSide(playerOrientation);
-        if(obj instanceof StandardDoor){
-            if (((StandardDoor) obj).isOpen())
+        if(obj instanceof GenericDoor){
+            if(obj instanceof ExitDoor) {
+                System.out.println("YOU WIN");
+                //exit game
+            }
+            if (((GenericDoor) obj).isOpen())
                 currentRoom=((StandardDoor) obj).otherSide(currentRoom);
             else
-                System.out.println("Door is Closed");
+                System.out.println("Door is Locked");
         }
 
         else
@@ -73,15 +79,16 @@ public class Player {
 
     public void moveBackward(){
         MapObjects obj= currentRoom.getSide(playerOrientation.getBackwardsDirection());
-        if(obj instanceof StandardDoor){
+        if(obj instanceof GenericDoor){
+            if(obj instanceof ExitDoor) {
+                System.out.println("YOU WIN");
+                //exit game
+            }
             if (((StandardDoor) obj).isOpen())
                 currentRoom=((StandardDoor) obj).otherSide(currentRoom);
             else
                 System.out.println("Door is Closed");
         }
-
-        else
-            System.out.println("Not facing a Door");
     }
 
     public void rotateLeft(){
@@ -133,6 +140,17 @@ public class Player {
             System.out.println("Room does not have light switch");
     }
 
+    public void Open(){
+        Wall object = currentRoom.getSide(playerOrientation);
+        if(object instanceof GenericDoor){
+            if(!((GenericDoor) object).isOpen())
+                ((GenericDoor) object).openDoor();
+            object.checkObject();
+        }
+        else
+            System.out.println("Object cannot be opened");
+    }
+
     public void Trade(){
        if(!trading.isTradingMode()){
            if(currentRoom.getSide(playerOrientation) instanceof Seller){
@@ -149,14 +167,29 @@ public class Player {
     }
 
     public void Buy(int itemNum){
-        if(!trading.isTradingMode()){
-            System.out.println("Player must enter trading mode");
-            return;
-        }
         trading.Buy(itemNum,this,(Seller)currentRoom.getSide(playerOrientation));
     }
 
+    public void Sell(int itemNum){
+        trading.Sell(itemNum,this,(Seller)currentRoom.getSide(playerOrientation));
+    }
 
-    //rest of commands here
-    
+    public void List(){
+        trading.List((Seller)currentRoom.getSide(playerOrientation));
+    }
+
+    public void finishTrade(){
+        trading.setTradingMode(false);
+    }
+
+    public void useKey(Key key){
+        Wall obj= currentRoom.getSide(playerOrientation);
+        if(obj instanceof GenericDoor)
+            ((GenericDoor) obj).useKey(key);
+        else if (obj instanceof Chest)
+            ((Chest) obj).useKey(key);
+        else
+            System.out.println("cannot use key on this object");
+    }
+
 }

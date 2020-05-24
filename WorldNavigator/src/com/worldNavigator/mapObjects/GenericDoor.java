@@ -8,7 +8,7 @@ import java.util.List;
 public abstract class GenericDoor extends WallDecorator {
 
     private boolean doorOpen;
-    private Key key=null;
+    private Lock lock;
 
     public GenericDoor(Wall wall) {
         super(wall);
@@ -17,19 +17,35 @@ public abstract class GenericDoor extends WallDecorator {
 
     public GenericDoor(Wall wall, Key key){
         super(wall);
-        this.key= key;
+        lock=new Lock(key);
         doorOpen= false;
     }
 
     public void openDoor(){
-        doorOpen =true;
+        if(lock==null)
+            doorOpen =true;
     }
     public void closeDoor(){ doorOpen = false; }
 
     public boolean isOpen(){
-        return doorOpen;
+        if(lock==null)
+            return doorOpen;
+        else
+            return lock.isLocked();
     }
 
+
+    public void useKey(Key userKey){
+        if(lock.useKey(userKey)){
+            if(lock.isLocked()){
+                System.out.println("Door Locked");
+            }
+            else
+                System.out.println("Door Opened");
+        }
+        else
+            System.out.println("Key does not match");
+    }
 
     @Override
     public boolean isCheckable() {
@@ -44,10 +60,10 @@ public abstract class GenericDoor extends WallDecorator {
     @Override
     public List<Item> checkObject(){
         List <Item> items= new ArrayList<Item>();
-        if(isOpen())
+        if(lock.isLocked())
             System.out.println("Door is open");
         else
-            System.out.println("Door is locked, "+key.getName()+" key is needed to unlock");
+            System.out.println("Door is locked, "+lock.getKey().getName()+" key is needed to unlock");
         return null;
     }
 

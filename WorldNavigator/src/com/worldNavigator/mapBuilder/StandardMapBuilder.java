@@ -1,7 +1,6 @@
 package com.worldNavigator.mapBuilder;
 
 import com.worldNavigator.Direction;
-import com.worldNavigator.Trade;
 import com.worldNavigator.mapObjects.*;
 
 import java.security.InvalidParameterException;

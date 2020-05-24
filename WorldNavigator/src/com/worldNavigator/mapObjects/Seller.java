@@ -1,30 +1,26 @@
 package com.worldNavigator.mapObjects;
 
+import com.worldNavigator.Items.Inventory;
 import com.worldNavigator.Items.Item;
 import com.worldNavigator.Trade;
-import com.worldNavigator.mapObjects.Wall;
-import com.worldNavigator.mapObjects.WallDecorator;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Seller extends WallDecorator {
 
     private Trade trading;
+    private Inventory sellerInventory = new Inventory();
 
-    public List<Item> getSellerInventory() {
+    public Inventory getSellerInventory() {
         return sellerInventory;
     }
-
-    private List<Item> sellerInventory = new ArrayList<Item>();
 
     public Seller(Wall wall, Trade trading){
         super(wall);
         this.trading=trading;
     }
 
-    public void addItem(Item item){
-        sellerInventory.add(item);
+    public void  addItems(List<Item> items){
+        sellerInventory.addItems(items);
     }
 
     @Override
@@ -33,18 +29,6 @@ public class Seller extends WallDecorator {
     }
 
     public void listItems(){
-        for( Item item : sellerInventory){
-            System.out.println(item.getDescription()+" Price: "+trading.getPrice(item.getClass()));
-        }
+        sellerInventory.listItemswithPrices(trading);
     }
-
-    public boolean inRange(int num){
-        return (num>0 && num<=sellerInventory.size());
-    }
-
-    public Item getItem(int num){
-        return sellerInventory.get(num);
-    }
-
-
 }

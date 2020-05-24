@@ -78,6 +78,4 @@ public class Room {
             throw new InvalidParameterException("Cannot compare this object with room");
     }
 
-
-
 }

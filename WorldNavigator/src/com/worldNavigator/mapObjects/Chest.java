@@ -3,6 +3,7 @@ package com.worldNavigator.mapObjects;
 
 import com.worldNavigator.Items.Item;
 import com.worldNavigator.Items.Key;
+import com.worldNavigator.Items.Lock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 public class Chest extends WallDecorator {
 
     private boolean chestOpen;
-    private Key key;
+    private Lock lock;
     List <Item> chestInventory= new ArrayList<Item>();
 
     public Chest(Wall wall){
@@ -21,13 +22,13 @@ public class Chest extends WallDecorator {
     public Chest(Wall wall, Key key){
         super(wall);
         chestOpen = false;
-        this.key= key;
+        lock=new Lock(key);
     }
 
     public Chest(Wall wall, Key key, List <Item> items){
         super(wall);
         chestOpen = false;
-        this.key= key;
+        lock=new Lock(key);
         chestInventory= items;
     }
 
@@ -55,6 +56,18 @@ public class Chest extends WallDecorator {
         return true;
     }
 
+    public void useKey(Key userKey){
+        if(lock.useKey(userKey)){
+            if(lock.isLocked()){
+                System.out.println("Chest Locked");
+            }
+            else
+                System.out.println("Chest Opened");
+        }
+        else
+            System.out.println("Key does not match");
+    }
+
     @Override
     public void getDescription() {
         System.out.println("Chest");
@@ -64,7 +77,7 @@ public class Chest extends WallDecorator {
     public List<Item> checkObject(){
         List <Item> items= new ArrayList<Item>();
         if(!isOpen()){
-            System.out.println("chest closed "+key.getName()+" key is required to unlock");
+            System.out.println("chest closed "+lock.getKey().getName()+" key is required to unlock");
         }
         else if(chestInventory.isEmpty()){
             System.out.println("No items found inside chest");
