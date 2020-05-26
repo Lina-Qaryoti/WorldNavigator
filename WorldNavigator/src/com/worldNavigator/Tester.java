@@ -8,7 +8,10 @@ import java.util.List;
 
 public class Tester {
     public static void main(String[] args) {
-        Player Hamza = Map1Builder.getInstance().buildLevel();
+        Game newgame = new Game();
+        newgame.homePage();
+
+        /*Player Hamza = Map1Builder.getInstance().buildLevel();
         Hamza.Look();
         System.out.println(Hamza.getCurrentRoom());
         Hamza.rotateRight();
@@ -16,7 +19,6 @@ public class Tester {
         Hamza.moveForward();
         System.out.println(Hamza.getCurrentRoom());
         Hamza.rotateLeft();
-        Hamza.Look();
-
+        Hamza.Look();*/
     }
 }

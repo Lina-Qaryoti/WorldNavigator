@@ -9,6 +9,7 @@ public interface MapBuilder {
     void buildRoom(int roomNO,int row,int column);
     void buildDoor(int r1, int r2);
     void setStartRoom(int roomNo);
+    void setMapDuration(long durationOfGame);
     void buildPainting(int roomNo, Direction direction);
     void buildSeller(int roomNo, Direction direction);
     void buildChest(int roomNo, Direction direction);
@@ -16,5 +17,4 @@ public interface MapBuilder {
     //void setMapItemsPrices(Class <? extends Item> object , Double price);
 
     Map getMap();
-
 }

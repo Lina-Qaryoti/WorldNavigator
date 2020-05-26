@@ -23,7 +23,13 @@ public class Inventory {
 
     public void listItemswithPrices(Trade prices){
         for( Item item : inventory){
-            System.out.println(item.getDescription()+" Price: "+prices.getPrice(item.getClass()));
+            System.out.println(item.getDescription()+" Price: "+prices.getPrice(item));
+        }
+    }
+
+    public void listItems(){
+        for( Item item : inventory){
+            System.out.println(item.getDescription());
         }
     }
 

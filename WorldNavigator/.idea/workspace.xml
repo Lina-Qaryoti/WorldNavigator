@@ -2,40 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b11f3f3-99fe-47af-a591-c3bf98f4d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Lock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/SoldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorldNavigator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WorldNavigator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Key.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Trade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map1Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map1Builder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Chest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/ExitDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/ExitDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/GenericDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/GenericDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/MapObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/MapObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Mirror.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Mirror.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Painting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Painting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightswitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightswitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Seller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/StandardDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/StandardDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/WallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/WallDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,10 +105,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590192973236">
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590524039711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590192973236" />
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590524039711" />
     <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590336091840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -143,42 +121,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589675348523" />
-    <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1590340210581">
+    <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1590532606323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590340210581" />
+    <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590532606323" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589196094604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589196094604" />
-    <state width="1137" height="286" key="GridCell.Tab.0.bottom" timestamp="1589766766083">
+    <state width="938" height="288" key="GridCell.Tab.0.bottom" timestamp="1590535353890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1137" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589766766083" />
-    <state width="1137" height="286" key="GridCell.Tab.0.center" timestamp="1589766766083">
+    <state width="938" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
+    <state width="938" height="288" key="GridCell.Tab.0.center" timestamp="1590535353890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1137" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589766766083" />
-    <state width="1137" height="286" key="GridCell.Tab.0.left" timestamp="1589766766081">
+    <state width="938" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
+    <state width="938" height="288" key="GridCell.Tab.0.left" timestamp="1590535353890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1137" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589766766081" />
-    <state width="1137" height="286" key="GridCell.Tab.0.right" timestamp="1589766766083">
+    <state width="938" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
+    <state width="938" height="288" key="GridCell.Tab.0.right" timestamp="1590535353890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1137" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589766766083" />
+    <state width="938" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
+    <state width="458" height="351" key="GridCell.Tab.1.bottom" timestamp="1590535192989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="458" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192989" />
+    <state width="458" height="351" key="GridCell.Tab.1.center" timestamp="1590535192988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="458" height="351" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192988" />
+    <state width="458" height="351" key="GridCell.Tab.1.left" timestamp="1590535192988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="458" height="351" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192988" />
+    <state width="458" height="351" key="GridCell.Tab.1.right" timestamp="1590535192989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="458" height="351" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192989" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1590333824651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590333824651" />
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1590333748555">
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1590519744994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590333748555" />
-    <state x="-7" y="0" width="975" height="527" key="dock-window-1" timestamp="1589845502619">
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590519744994" />
+    <state x="-7" y="0" width="975" height="527" key="dock-window-1" timestamp="1590524862157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-7" y="0" width="975" height="527" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1589845502619" />
+    <state x="-7" y="0" width="975" height="527" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1590524862157" />
     <state x="-7" y="520" width="975" height="527" key="dock-window-2" timestamp="1589845072377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -187,9 +181,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1589975134323" />
-    <state x="1146" y="152" key="refactoring.ChangeSignatureDialog" timestamp="1590340316190">
+    <state x="1146" y="152" key="refactoring.ChangeSignatureDialog" timestamp="1590520008425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1146" y="152" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590340316190" />
+    <state x="1146" y="152" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590520008425" />
   </component>
 </project>

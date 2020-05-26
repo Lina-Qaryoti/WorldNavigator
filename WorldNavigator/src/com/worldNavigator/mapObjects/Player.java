@@ -60,10 +60,17 @@ public class Player {
         this.currentRoom = currentRoom;
     }
 
+    public void playerStatus(){
+        System.out.println("Player is facing "+ playerOrientation.name());
+        System.out.println("Player has "+gold+" gold");
+        System.out.println("Items in player inventory:");
+        playerInventory.listItems();
+    }
+
     public void moveForward(){
         MapObjects obj= currentRoom.getSide(playerOrientation);
         if(obj instanceof GenericDoor){
-            if(obj instanceof ExitDoor) {
+            if(obj instanceof ExitDoor && ((ExitDoor) obj).isOpen()) {
                 System.out.println("YOU WIN");
                 //exit game
             }
@@ -191,5 +198,6 @@ public class Player {
         else
             System.out.println("cannot use key on this object");
     }
+
 
 }

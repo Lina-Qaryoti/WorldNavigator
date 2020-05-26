@@ -62,6 +62,11 @@ public class StandardMapBuilder implements MapBuilder {
     }
 
     @Override
+    public void setMapDuration(long durationOfGame) {
+        m.setGameDuration(durationOfGame);
+    }
+
+    @Override
     public void buildPainting(int roomNo, Direction direction) {
         Room room = m.getRoom(roomNo);
         Wall painting= new Painting(room.getSide(direction));

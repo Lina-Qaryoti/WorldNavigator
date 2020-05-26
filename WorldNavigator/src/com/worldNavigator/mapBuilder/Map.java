@@ -13,6 +13,7 @@ public class Map {
     private Room[][] rooms;
     private Room startRoom;
     private Trade trading;
+    private Timer timer;
 
 
     public void setItemPrice(Class <? extends Item> object ,Double price){
@@ -28,6 +29,14 @@ public class Map {
         this.columns=columns;
         rooms= new Room[rows][columns];
         trading= new Trade();
+    }
+
+    public void setGameDuration(long durationOfGame){
+        timer = new Timer(durationOfGame);
+    }
+
+    public void startTimer(){
+        timer.run();
     }
 
     public void addRoom(Room room){
