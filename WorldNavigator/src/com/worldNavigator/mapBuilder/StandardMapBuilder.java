@@ -42,7 +42,6 @@ public class StandardMapBuilder implements MapBuilder {
 
     @Override
     public void buildDoor(int r1, int r2) {
-        //maybe implement try catch ??
         Room fromRoom=m.getRoom(r1);
         Room toRoom=m.getRoom(r2);
         Wall w=new Wall();

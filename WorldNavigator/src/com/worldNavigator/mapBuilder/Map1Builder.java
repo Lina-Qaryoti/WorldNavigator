@@ -11,6 +11,7 @@ public class Map1Builder extends MapCreationTemplate {
 
     }
 
+
     @Override
     protected MapBuilder createMapBuilder() {
         return new StandardMapBuilder();
@@ -24,15 +25,6 @@ public class Map1Builder extends MapCreationTemplate {
     @Override
     protected Player createPlayer(Trade trade) {
         return new Player(50,trade);
-    }
-
-    @Override
-    protected void endGame(MapBuilder builder, Map map, Player player) {
-        builder=null;
-        map=null;
-        player=null;
-        System.out.println("Would you like to start over?");
-
     }
 
     public static Map1Builder getInstance(){

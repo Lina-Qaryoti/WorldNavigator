@@ -1,10 +1,7 @@
 package com.worldNavigator.mapObjects;
 
 import com.worldNavigator.Direction;
-import com.worldNavigator.Items.Flashlight;
-import com.worldNavigator.Items.Inventory;
-import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.Key;
+import com.worldNavigator.Items.*;
 import com.worldNavigator.Trade;
 
 import java.util.List;
@@ -29,7 +26,9 @@ public class Player {
         return playerInventory;
     }
 
-
+    public void printRoomNumber(){
+        System.out.println("Room #"+getCurrentRoom());
+    }
 
     public int getCurrentRoom() {
         return currentRoom.getRoomNo();

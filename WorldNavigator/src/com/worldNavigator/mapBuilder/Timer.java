@@ -1,7 +1,5 @@
 package com.worldNavigator.mapBuilder;
 
-import java.util.Date;
-
 public class Timer extends Thread {
 
     private long durationOfGame; //in milli seconds

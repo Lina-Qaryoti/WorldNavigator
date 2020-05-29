@@ -5,6 +5,7 @@ import com.worldNavigator.Trade;
 import com.worldNavigator.mapObjects.Room;
 
 import java.security.InvalidParameterException;
+import java.util.StringJoiner;
 
 public class Map {
 
@@ -36,7 +37,7 @@ public class Map {
     }
 
     public void startTimer(){
-        timer.run();
+        timer.start();
     }
 
     public void addRoom(Room room){
@@ -118,5 +119,27 @@ public class Map {
 
     public void setStartRoom(int roomNO) {
         this.startRoom = getRoom(roomNO);
+    }
+
+    public void printMap(){
+
+        String lineSplit = "";
+        StringJoiner splitJoiner = new StringJoiner("+", "|", "|");
+        for (int index = 0; index < rooms[0].length; index++) {
+            splitJoiner.add(String.format("%4s", "").replace(" ", "-"));
+        }
+        lineSplit = splitJoiner.toString();
+        for (Room[] row : rooms) {
+            StringJoiner sj = new StringJoiner("  | ", "| ", "  |");
+            for (Room col : row) {
+                if(col!=null && col.equals(startRoom))
+                    sj.add("X");
+                else
+                    sj.add(" ");
+            }
+            System.out.println(lineSplit);
+            System.out.println(sj.toString());
+        }
+        System.out.println(lineSplit);
     }
 }

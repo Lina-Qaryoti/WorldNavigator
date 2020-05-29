@@ -1,7 +1,5 @@
 package com.worldNavigator.Items;
 
-import com.worldNavigator.mapObjects.Seller;
-
 public class Flashlight extends Item {
     private boolean button;
 

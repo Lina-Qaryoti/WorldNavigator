@@ -16,6 +16,4 @@ public class ExitDoor extends GenericDoor {
         this.room= room;
     }
 
-
-
 }

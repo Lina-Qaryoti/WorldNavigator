@@ -2,19 +2,19 @@ package com.worldNavigator.mapObjects;
 
 public class RoomWithLightswitch extends Room {
 
-    private boolean lightswitch;
+    private boolean lightSwitch;
 
     public RoomWithLightswitch(int roomNO, int row, int column) {
         super(roomNO, row, column);
-        lightswitch= true;
+        lightSwitch = true;
     }
 
     public void switchLights(){
-        lightswitch=!lightswitch;
+        lightSwitch =!lightSwitch;
     }
 
     public boolean isSwitchLit(){
-        return lightswitch;
+        return lightSwitch;
     }
 
 }

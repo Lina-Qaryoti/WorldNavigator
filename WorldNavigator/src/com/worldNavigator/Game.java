@@ -11,12 +11,30 @@ public class Game {
 
     Scanner scan = new Scanner(System.in);
 
-    public void startGame(){
+    public void startMap1(){
         Player newPlayer = Map1Builder.getInstance().buildLevel();
         System.out.println("Welcome to map1");
-        while(true){
-            commandTranslator(newPlayer);
+        while(commandTranslator(newPlayer));
+
+    }
+
+    private void winGame(){
+        System.out.println("Congrats you won!!!");
+    }
+
+    private void loseGame(){
+        System.out.println("You lost");
+    }
+
+    private boolean restartGame(){
+        System.out.println("Would you like to restart game?");
+        System.out.println("Enter Yes | No ?");
+        String confirm= scan.next();
+        if(confirm.equals("Yes")){
+            return true;
         }
+        else
+            return false;
     }
 
     private boolean isValidCommand(String command){
@@ -29,12 +47,16 @@ public class Game {
         }
     }
 
-    private void commandTranslator(Player player){
+    private boolean commandTranslator(Player player){
         String command= scan.next();
+        if(command.equals("quit") || command.equals("restart")) {
+            loseGame();
+            return false;
+        }
         if(isValidCommand(command)){
             try{
                 Method m =Player.class.getMethod(command);
-                m.invoke(player,command);
+                m.invoke(player);
             }
             catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e){
             }
@@ -43,9 +65,11 @@ public class Game {
         else{
             System.out.println("Invalid command");
         }
+
+        return true;
     }
 
-    public void homePage(){
+    public boolean homePage(){
         System.out.println("Welcome to World Navigator");
         int mapNum;
         while (true){
@@ -55,8 +79,10 @@ public class Game {
             String className= "com.worldNavigator.mapBuilder."+mapName;
             try {
                 Class.forName(className);
-                System.out.println("success");
-                startGame();
+                if(mapNum==1)
+                    startMap1();
+
+                return restartGame();
             }
             catch (ClassNotFoundException e){
                 System.out.println("No such map exists");

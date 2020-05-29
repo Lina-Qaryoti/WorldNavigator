@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b11f3f3-99fe-47af-a591-c3bf98f4d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map1Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map1Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/ExitDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/ExitDoor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightswitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightswitch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +108,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590524039711">
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590776228965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590524039711" />
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590776228965" />
     <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590336091840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -129,46 +132,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589196094604" />
-    <state width="938" height="288" key="GridCell.Tab.0.bottom" timestamp="1590535353890">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1590778571683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
-    <state width="938" height="288" key="GridCell.Tab.0.center" timestamp="1590535353890">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590778571683" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1590778571682">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
-    <state width="938" height="288" key="GridCell.Tab.0.left" timestamp="1590535353890">
+    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590778571682" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1590778571682">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
-    <state width="938" height="288" key="GridCell.Tab.0.right" timestamp="1590535353890">
+    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590778571682" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1590778571683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590535353890" />
-    <state width="458" height="351" key="GridCell.Tab.1.bottom" timestamp="1590535192989">
+    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590778571683" />
+    <state width="458" height="351" key="GridCell.Tab.1.bottom" timestamp="1590537494539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="458" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192989" />
-    <state width="458" height="351" key="GridCell.Tab.1.center" timestamp="1590535192988">
+    <state width="458" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590537494539" />
+    <state width="458" height="351" key="GridCell.Tab.1.center" timestamp="1590537494539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="458" height="351" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192988" />
-    <state width="458" height="351" key="GridCell.Tab.1.left" timestamp="1590535192988">
+    <state width="458" height="351" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590537494539" />
+    <state width="458" height="351" key="GridCell.Tab.1.left" timestamp="1590537494538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="458" height="351" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192988" />
-    <state width="458" height="351" key="GridCell.Tab.1.right" timestamp="1590535192989">
+    <state width="458" height="351" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590537494538" />
+    <state width="458" height="351" key="GridCell.Tab.1.right" timestamp="1590537494539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="458" height="351" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590535192989" />
+    <state width="458" height="351" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590537494539" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1590333824651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590333824651" />
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1590519744994">
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1590772725031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590519744994" />
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590772725031" />
     <state x="-7" y="0" width="975" height="527" key="dock-window-1" timestamp="1590524862157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
