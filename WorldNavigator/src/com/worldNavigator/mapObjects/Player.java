@@ -3,11 +3,12 @@ package com.worldNavigator.mapObjects;
 import com.worldNavigator.Direction;
 import com.worldNavigator.Items.*;
 import com.worldNavigator.Trade;
+import com.worldNavigator.Exceptions.WinningException;
 
 import java.util.List;
 import java.util.Optional;
 
-public class Player {
+public class Player extends Exception {
     private Room currentRoom;
     private Direction playerOrientation;
     private double gold;
@@ -66,12 +67,11 @@ public class Player {
         playerInventory.listItems();
     }
 
-    public void moveForward(){
+    public void moveForward() throws WinningException {
         MapObjects obj= currentRoom.getSide(playerOrientation);
         if(obj instanceof GenericDoor){
             if(obj instanceof ExitDoor && ((ExitDoor) obj).isOpen()) {
-                System.out.println("YOU WIN");
-                //exit game
+                throw new WinningException();
             }
             if (((GenericDoor) obj).isOpen())
                 currentRoom=((StandardDoor) obj).otherSide(currentRoom);
@@ -81,14 +81,14 @@ public class Player {
 
         else
             System.out.println("Not facing a Door");
+
     }
 
-    public void moveBackward(){
+    public void moveBackward() throws WinningException {
         MapObjects obj= currentRoom.getSide(playerOrientation.getBackwardsDirection());
         if(obj instanceof GenericDoor){
             if(obj instanceof ExitDoor) {
-                System.out.println("YOU WIN");
-                //exit game
+                throw new WinningException();
             }
             if (((StandardDoor) obj).isOpen())
                 currentRoom=((StandardDoor) obj).otherSide(currentRoom);
@@ -105,7 +105,7 @@ public class Player {
         playerOrientation=playerOrientation.getRightDirection();
     }
 
-    public void Look(){
+    public void Look() throws WinningException{
         if(currentRoom.isDarkRoom()){
             System.out.println("Dark");
         }
@@ -197,6 +197,4 @@ public class Player {
         else
             System.out.println("cannot use key on this object");
     }
-
-
 }

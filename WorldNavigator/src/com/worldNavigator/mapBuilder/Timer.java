@@ -1,5 +1,7 @@
 package com.worldNavigator.mapBuilder;
 
+import com.worldNavigator.Exceptions.LosingException;
+
 public class Timer extends Thread {
 
     private long durationOfGame; //in milli seconds
@@ -8,13 +10,17 @@ public class Timer extends Thread {
         this.durationOfGame=durationOfGame;
     }
 
-    public void run(){
+    public void runTimer() {
+            start();
         try {
             Thread.sleep(durationOfGame);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        //game over
+        try {
+            throw new LosingException();
+        } catch (LosingException e) {
+            e.printStackTrace();
+        }
     }
 }

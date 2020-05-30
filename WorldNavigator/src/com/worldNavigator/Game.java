@@ -1,5 +1,7 @@
 package com.worldNavigator;
 
+import com.worldNavigator.Exceptions.LosingException;
+import com.worldNavigator.Exceptions.WinningException;
 import com.worldNavigator.mapBuilder.*;
 import com.worldNavigator.mapObjects.Player;
 
@@ -58,9 +60,20 @@ public class Game {
                 Method m =Player.class.getMethod(command);
                 m.invoke(player);
             }
-            catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e){
+            catch (NoSuchMethodException | IllegalAccessException e){
+                System.out.println("Invalid command");
             }
+            catch (InvocationTargetException e){ //catches custom excpetions
+                if(e.getTargetException().getClass().equals(WinningException.class)) {
+                    winGame();
+                    return false;
+                }
 
+                if(e.getTargetException().getClass().equals(LosingException.class)){
+                    loseGame();
+                    return false;
+                }
+            }
         }
         else{
             System.out.println("Invalid command");

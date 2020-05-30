@@ -11,7 +11,7 @@ public class MapDesigner {
         mb.buildMap(3,3);
         mb.buildRoom(1,0,0);
         mb.setStartRoom(1);
-        mb.setMapDuration(300000);
+        mb.setMapDuration(3000);
         mb.buildRoom(2,0,1);
         mb.buildDoor(1,2);
         mb.buildMirror(2, Direction.North);

@@ -8,5 +8,7 @@ public class Tester {
             Game newGame = new Game();
             flag = newGame.homePage();
         }
+        System.out.println("Thank you for Playing");
+        System.exit(0);
     }
 }
