@@ -1,6 +1,7 @@
 package com.worldNavigator.mapObjects;
 
 
+import com.worldNavigator.Items.Inventory;
 import com.worldNavigator.Items.Item;
 import com.worldNavigator.Items.Key;
 import com.worldNavigator.Items.Lock;
@@ -12,7 +13,7 @@ public class Chest extends WallDecorator {
 
     private boolean chestOpen;
     private Lock lock;
-    List <Item> chestInventory= new ArrayList<Item>();
+    Inventory chestInventory= new Inventory();
 
     public Chest(Wall wall){
         super(wall);
@@ -29,13 +30,13 @@ public class Chest extends WallDecorator {
         super(wall);
         chestOpen = false;
         lock=new Lock(key);
-        chestInventory= items;
+        chestInventory.addItems(items);
     }
 
     public Chest(Wall wall, List <Item> items){
         super(wall);
         chestOpen = false;
-        chestInventory= items;
+        chestInventory.addItems(items);
     }
 
 
@@ -61,8 +62,11 @@ public class Chest extends WallDecorator {
             if(lock.isLocked()){
                 System.out.println("Chest Locked");
             }
-            else
+            else {
+                lock.unlock();
+                openChest();
                 System.out.println("Chest Opened");
+            }
         }
         else
             System.out.println("Key does not match");
@@ -76,6 +80,7 @@ public class Chest extends WallDecorator {
     @Override
     public List<Item> checkObject(){
         List <Item> items= new ArrayList<Item>();
+
         if(!isOpen()){
             System.out.println("chest closed "+lock.getKey().getName()+" key is required to unlock");
         }
@@ -84,7 +89,9 @@ public class Chest extends WallDecorator {
         }
         else{
             System.out.println("Items found inside chest:");
-            //Use iterable ?!!?!
+            chestInventory.listItems();
+            items= chestInventory.getInventory();
+            chestInventory.emptyInventory();
         }
         return items;
     }

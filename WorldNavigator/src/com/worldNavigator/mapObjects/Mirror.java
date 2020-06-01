@@ -39,6 +39,7 @@ public class Mirror extends WallDecorator {
         if(hasKey()) {
             items.add(key);
             System.out.println("The "+key.getName()+" key was acquired");
+            key=null;
         }
         return items;
     }

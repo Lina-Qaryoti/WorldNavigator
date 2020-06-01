@@ -7,20 +7,21 @@ import com.worldNavigator.Exceptions.WinningException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 public class Player extends Exception {
     private Room currentRoom;
     private Direction playerOrientation;
-    private double gold;
+    private Gold gold= new Gold(0.0);
     private Inventory playerInventory= new Inventory();
     private Trade trading;
 
     public double getGold() {
-        return gold;
+        return gold.getAmount();
     }
 
     public void transaction(double balance){
-        gold+=balance;
+        gold.setAmount(gold.getAmount()+balance);
     }
 
     public Inventory getPlayerInventory() {
@@ -35,11 +36,10 @@ public class Player extends Exception {
         return currentRoom.getRoomNo();
     }
 
+
     public Player(double initialGold, Trade trading){
         if(initialGold>=0)
-            gold=initialGold;
-        else
-            gold=0;
+            gold.setAmount(initialGold);
 
         playerOrientation=Direction.North;
         this.trading=trading;
@@ -47,9 +47,8 @@ public class Player extends Exception {
 
     public Player(double initialGold, List<Item> items, Trade trading){
         if(initialGold>=0)
-            gold=initialGold;
-        else
-            gold=0;
+            gold.setAmount(initialGold);
+
         playerInventory.addItems(items);
         playerOrientation=Direction.North;
         this.trading=trading;
@@ -62,7 +61,7 @@ public class Player extends Exception {
 
     public void playerStatus(){
         System.out.println("Player is facing "+ playerOrientation.name());
-        System.out.println("Player has "+gold+" gold");
+        System.out.println(gold.getDescription());
         System.out.println("Items in player inventory:");
         playerInventory.listItems();
     }
@@ -115,11 +114,20 @@ public class Player extends Exception {
     }
 
     public void Check(){
-        if(!currentRoom.getSide(playerOrientation).isCheckable())
+        if(!currentRoom.getSide(playerOrientation).isCheckable()) {
             System.out.println("This object cannot be checked");
+            return;
+        }
         else{
             List<Item> itemsFound= currentRoom.getSide(playerOrientation).checkObject();
-            playerInventory.addItems(itemsFound);
+            for( Item item : itemsFound){
+                if(item.getClass()==Gold.class)
+                    transaction(((Gold) item).getAmount());
+
+                else
+                    playerInventory.addItem(item);
+
+            }
         }
     }
 
@@ -188,8 +196,16 @@ public class Player extends Exception {
         trading.setTradingMode(false);
     }
 
-    public void useKey(Key key){
+    public void useKey(){
+        Scanner sc= new Scanner(System.in);
+        String keyName= sc.next();
+
         Wall obj= currentRoom.getSide(playerOrientation);
+        Key key=playerInventory.keyExists(keyName);
+        if(key==null) {
+            System.out.println("Player does not have key in inventory");
+            return;
+        }
         if(obj instanceof GenericDoor)
             ((GenericDoor) obj).useKey(key);
         else if (obj instanceof Chest)

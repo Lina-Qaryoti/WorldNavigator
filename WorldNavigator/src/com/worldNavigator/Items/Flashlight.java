@@ -3,7 +3,7 @@ package com.worldNavigator.Items;
 public class Flashlight extends Item {
     private boolean button;
 
-    private Flashlight(){
+    public Flashlight(){
         button= false;
     }
 

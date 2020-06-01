@@ -58,7 +58,7 @@ public class Map {
     public Room getRoom(int roomNo){
         for (int i=0;i<rows;i++){
             for(int j=0;j<columns;j++){
-                if (rooms[i][j].getRoomNo()==roomNo)
+                if (rooms[i][j]!=null && rooms[i][j].getRoomNo()==roomNo)
                     return rooms[i][j];
             }
         }

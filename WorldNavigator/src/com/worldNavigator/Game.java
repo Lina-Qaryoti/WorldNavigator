@@ -20,6 +20,12 @@ public class Game {
 
     }
 
+    public void startMap2(){
+        Player newPlayer= Map2Builder.getInstance().buildLevel();
+        System.out.println("Welcome to map2");
+        while (commandTranslator(newPlayer));
+    }
+
     private void winGame(){
         System.out.println("Congrats you won!!!");
     }
@@ -57,8 +63,10 @@ public class Game {
         }
         if(isValidCommand(command)){
             try{
+
                 Method m =Player.class.getMethod(command);
                 m.invoke(player);
+
             }
             catch (NoSuchMethodException | IllegalAccessException e){
                 System.out.println("Invalid command");
@@ -94,6 +102,8 @@ public class Game {
                 Class.forName(className);
                 if(mapNum==1)
                     startMap1();
+                else if(mapNum==2)
+                    startMap2();
 
                 return restartGame();
             }

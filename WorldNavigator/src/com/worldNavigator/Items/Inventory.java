@@ -13,8 +13,18 @@ public class Inventory {
         inventory.add(item);
     }
 
+    public List<Item> getInventory(){
+        return inventory;
+    }
+
+    public void emptyInventory(){
+        inventory=null;
+    }
+
     public void addItems(List <Item> items){
-        inventory.addAll(items);
+        for(Item item : items) {
+            addItem(item);
+        }
     }
 
     public void removeFromInventory(Item item){
@@ -25,6 +35,10 @@ public class Inventory {
         for( Item item : inventory){
             System.out.println(item.getDescription()+" Price: "+prices.getPrice(item));
         }
+    }
+
+    public boolean isEmpty(){
+        return inventory.isEmpty();
     }
 
     public void listItems(){
@@ -48,6 +62,14 @@ public class Inventory {
         }
         else
             return null;
+    }
+
+    public Key keyExists(String keyName){
+        for(Item item: inventory){
+            if(item instanceof Key && keyName.equals(((Key) item).getName()))
+                return (Key) item;
+        }
+        return null;
     }
 
     public boolean inRange(int num){

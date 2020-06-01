@@ -11,7 +11,7 @@ public abstract class MapCreationTemplate {
         map.printMap();
         Player player = createPlayer(map.getTrading());
         player.setCurrentRoom(map.getStartRoom());
-        map.startTimer();
+        //map.startTimer();
         return player;
     }
 

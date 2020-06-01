@@ -2,14 +2,14 @@ package com.worldNavigator.Items;
 
 public class SoldKey extends Key {
 
-    private Double price;
+    private Gold price;
 
     public SoldKey(String name, Double price) {
         super(name);
-        this.price=price;
+        this.price= new Gold(price);
     }
 
     public Double getPrice(){
-        return price;
+        return price.getAmount();
     }
 }
