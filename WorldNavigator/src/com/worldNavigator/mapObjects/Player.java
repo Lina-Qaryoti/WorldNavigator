@@ -105,7 +105,7 @@ public class Player extends Exception {
     }
 
     public void Look() throws WinningException{
-        if(currentRoom.isDarkRoom()){
+        if(!canSee()){
             System.out.println("Dark");
         }
         else{
@@ -141,15 +141,16 @@ public class Player extends Exception {
     public void useFlashLight(){
 
         Optional<Flashlight> flashlight = playerInventory.getFlashlight();
-        if(flashlight.isPresent())
+        if(flashlight.isPresent()) {
             flashlight.get().pressButton();
+        }
         else
             System.out.println("No flashlight in inventory");
     }
 
     public void SwitchLights(){
-        if(currentRoom instanceof RoomWithLightswitch)
-            ((RoomWithLightswitch) currentRoom).switchLights();
+        if(currentRoom instanceof RoomWithLightSwitch)
+            ((RoomWithLightSwitch) currentRoom).switchLights();
         else
             System.out.println("Room does not have light switch");
     }
@@ -158,7 +159,7 @@ public class Player extends Exception {
         Wall object = currentRoom.getSide(playerOrientation);
         if(object instanceof GenericDoor){
             if(!((GenericDoor) object).isOpen())
-                ((GenericDoor) object).openDoor();
+                ((GenericDoor) object).unlockDoor();
             object.checkObject();
         }
         else
@@ -180,12 +181,12 @@ public class Player extends Exception {
        }
     }
 
-    public void Buy(int itemNum){
-        trading.Buy(itemNum,this,(Seller)currentRoom.getSide(playerOrientation));
+    public void Buy(){
+        trading.Buy(this,(Seller)currentRoom.getSide(playerOrientation));
     }
 
-    public void Sell(int itemNum){
-        trading.Sell(itemNum,this,(Seller)currentRoom.getSide(playerOrientation));
+    public void Sell(){
+        trading.Sell(this,(Seller)currentRoom.getSide(playerOrientation));
     }
 
     public void List(){

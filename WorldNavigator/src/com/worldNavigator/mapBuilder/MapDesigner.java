@@ -17,6 +17,7 @@ public class MapDesigner {
         mb.buildRoom(2,0,1);
         mb.buildDoor(1,2);
         mb.buildMirror(2, Direction.North);
+        mb.buildExitDoor(Direction.East,2);
 
         return mb.getMap();
     }
@@ -50,9 +51,16 @@ public class MapDesigner {
         mb.addItemToSellerInventory(doorKey4);
         mb.addSellerInventoryToSeller(seller);
 
-        mb.buildRoom(4,2,1);
+        mb.buildRoomWithLightSwitch(4,2,1);
         mb.buildLockedDoor(3,4,doorKey4);
+        mb.buildPainting(4,Direction.South);
+        Painting painting1= (Painting) mb.getWallObject(4,Direction.South);
+        Key exitKey= new Key("Exit-Key");
+        mb.buildKeyInPainting(painting1,exitKey);
 
+        mb.buildDarkRoom(5,2,2);
+        mb.buildDoor(4,5);
+        mb.buildLockedExitDoor(Direction.East,5,exitKey);
 
         return mb.getMap();
 

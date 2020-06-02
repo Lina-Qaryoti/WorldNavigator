@@ -7,6 +7,7 @@ import com.worldNavigator.mapObjects.Seller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Trade {
     private HashMap<Class<? extends Item>, Double> itemsPrices = new HashMap<>();
@@ -49,15 +50,17 @@ public class Trade {
 
     public void listItemPrices(){
         for (Map.Entry<Class <? extends Item> ,Double> entry : itemsPrices.entrySet()) {
-            String object = entry.getKey().getName();
+            String object = entry.getKey().getSimpleName();
             Double price = entry.getValue();
-            System.out.println(object + " : " + price + " gold coins");
+            System.out.println(object+ " : " + price + " gold coins");
         }
     }
 
 
-    public void Buy(int itemNum, Player player, Seller seller){
+    public void Buy( Player player, Seller seller){
         if(canTrade()) {
+            Scanner sc= new Scanner(System.in);
+            int itemNum=sc.nextInt();
             if (seller.getSellerInventory().inRange(itemNum)) {
                 Item object = seller.getSellerInventory().getItem(itemNum);
                 double price = getPrice(object);
@@ -75,8 +78,11 @@ public class Trade {
         }
     }
 
-    public void Sell(int itemNum, Player player, Seller seller){
+    public void Sell( Player player, Seller seller){
         if(canTrade()) {
+            listItemPrices();
+            Scanner sc= new Scanner(System.in);
+            int itemNum=sc.nextInt();
             if (player.getPlayerInventory().inRange(itemNum)) {
                 Item object = player.getPlayerInventory().getItem(itemNum);
                 double price = getPrice(object);

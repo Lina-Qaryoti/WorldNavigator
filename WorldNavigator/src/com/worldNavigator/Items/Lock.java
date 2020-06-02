@@ -29,12 +29,11 @@ public class Lock {
         if(userKey.equals(key)){
             if(isLocked()){
                 unlock();
-                return true;
             }
             else{
                 lock();
-                return true;
             }
+            return true;
         }
         return false;
     }

@@ -13,14 +13,20 @@ public interface MapBuilder {
     void setMapItemsPrices(Class <? extends Item> object , Double price);
 
     void buildRoom(int roomNO,int row,int column);
+    void buildRoomWithLightSwitch(int roomNo, int row, int column);
+    void buildDarkRoom(int roomNo,int row, int column);
+    Room getRoom(int roomNo);
 
     void buildDoor(int r1, int r2);
     void buildClosedDoor(int r1, int r2);
     void buildLockedDoor(int r1, int r2, Key key);
+    void buildExitDoor(Direction direction, int roomNo);
+    void buildLockedExitDoor(Direction direction, int roomNo, Key key);
 
     void setStartRoom(int roomNo);
 
     void buildPainting(int roomNo, Direction direction);
+    void buildKeyInPainting(Painting painting, Key key);
 
     Seller buildSeller(int roomNo, Direction direction);
     void buildSellerInventory();

@@ -21,27 +21,35 @@ public abstract class GenericDoor extends WallDecorator {
         doorOpen= false;
     }
 
-    public void openDoor(){
+    public void unlockDoor(){
         if(lock==null)
-            doorOpen =true;
+            doorOpen=true;
     }
-    public void closeDoor(){ doorOpen = false; }
+
+    public void openDoor(){
+        doorOpen =true;
+    }
+    public void closeDoor(){
+        doorOpen = false;
+    }
 
     public boolean isOpen(){
-        if(lock==null)
-            return doorOpen;
-        else
-            return lock.isLocked();
+        return doorOpen;
     }
 
 
     public void useKey(Key userKey){
         if(lock.useKey(userKey)){
             if(lock.isLocked()){
-                System.out.println("Door Locked");
+                System.out.println("Door locked");
+                lock.lock();
+                closeDoor();
             }
-            else
-                System.out.println("Door Opened");
+            else {
+                System.out.println("Door unlocked");
+                openDoor();
+                unlockDoor();
+            }
         }
         else
             System.out.println("Key does not match");
@@ -60,9 +68,9 @@ public abstract class GenericDoor extends WallDecorator {
     @Override
     public List<Item> checkObject(){
         List <Item> items= new ArrayList<Item>();
-        if(lock!=null && lock.isLocked())
+        if(lock!=null && !isOpen())
             System.out.println("Door is locked, "+lock.getKey().getName()+" key is needed to unlock");
-        else if(!doorOpen)
+        else if(!isOpen())
             System.out.println("Door is locked");
         else
             System.out.println("Door is open");

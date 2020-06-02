@@ -2,29 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b11f3f3-99fe-47af-a591-c3bf98f4d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Gold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map2Builder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Items/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Items/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Trade.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Trade.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapCreationTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapCreationTemplate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapDesigner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/MapDesigner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/StandardMapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapBuilder/StandardMapBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Flashlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Chest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Chest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/GenericDoor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/GenericDoor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/RoomWithLightswitch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/RoomWithLightswitch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/SoldKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/SoldKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Items/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Items/Lock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/Trade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/StandardMapBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Chest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/GenericDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/GenericDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Mirror.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Mirror.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightswitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapObjects/RoomWithLightSwitch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,14 +116,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590966171849">
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1591054736207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590966171849" />
-    <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590336091840">
+    <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591054736207" />
+    <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591049239344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1590336091840" />
+    <state x="1236" y="408" width="427" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1591049239344" />
     <state x="1236" y="426" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1588447593320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -141,46 +140,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589196094604" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1590971168346">
+    <state width="1877" height="538" key="GridCell.Tab.0.bottom" timestamp="1591055483371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590971168346" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1590971168345">
+    <state width="1877" height="538" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591055483371" />
+    <state width="1877" height="538" key="GridCell.Tab.0.center" timestamp="1591055483371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590971168345" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1590971168345">
+    <state width="1877" height="538" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591055483371" />
+    <state width="1877" height="538" key="GridCell.Tab.0.left" timestamp="1591055483371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590971168345" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1590971168346">
+    <state width="1877" height="538" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591055483371" />
+    <state width="1877" height="538" key="GridCell.Tab.0.right" timestamp="1591055483371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590971168346" />
-    <state width="1877" height="353" key="GridCell.Tab.1.bottom" timestamp="1590966981460">
+    <state width="1877" height="538" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591055483371" />
+    <state width="1877" height="353" key="GridCell.Tab.1.bottom" timestamp="1590971442173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590966981460" />
-    <state width="1877" height="353" key="GridCell.Tab.1.center" timestamp="1590966981460">
+    <state width="1877" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590971442173" />
+    <state width="1877" height="353" key="GridCell.Tab.1.center" timestamp="1590971442173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590966981460" />
-    <state width="1877" height="353" key="GridCell.Tab.1.left" timestamp="1590966981460">
+    <state width="1877" height="353" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590971442173" />
+    <state width="1877" height="353" key="GridCell.Tab.1.left" timestamp="1590971442173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590966981460" />
-    <state width="1877" height="353" key="GridCell.Tab.1.right" timestamp="1590966981460">
+    <state width="1877" height="353" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590971442173" />
+    <state width="1877" height="353" key="GridCell.Tab.1.right" timestamp="1590971442173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590966981460" />
+    <state width="1877" height="353" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590971442173" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1590333824651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590333824651" />
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1590957658762">
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1591045972658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590957658762" />
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591045972658" />
     <state x="-7" y="0" width="975" height="527" key="dock-window-1" timestamp="1590524862157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -201,5 +200,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1146" y="152" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590520008425" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591049573095">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591049573095" />
   </component>
 </project>

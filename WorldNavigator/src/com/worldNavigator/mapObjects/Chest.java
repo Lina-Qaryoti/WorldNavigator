@@ -60,6 +60,8 @@ public class Chest extends WallDecorator {
     public void useKey(Key userKey){
         if(lock.useKey(userKey)){
             if(lock.isLocked()){
+                lock.lock();
+                closeChest();
                 System.out.println("Chest Locked");
             }
             else {

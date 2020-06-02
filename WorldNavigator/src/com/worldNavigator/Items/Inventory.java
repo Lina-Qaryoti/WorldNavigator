@@ -57,7 +57,7 @@ public class Inventory {
 
     public Item getItem(int num){
         if(inRange(num)){
-            Item obj= inventory.get(num);
+            Item obj= inventory.get(num-1);
             return obj;
         }
         else

@@ -20,6 +20,14 @@ public class Room {
         darkRoom =false;
     }
 
+    public Room(int roomNO, int row, int column,boolean roomDark){
+
+        this.row=row;
+        this.column=column;
+        this.roomNO=roomNO;
+        darkRoom =roomDark;
+    }
+
     public void setRow(int row) {
         this.row = row;
     }
@@ -55,8 +63,9 @@ public class Room {
 
 
     public void lightUpRoom(){
-        darkRoom =false;
     }
+    public void darkenRoom(){}
+
 
     public void setSide(Direction d, Wall obj){
         if(d!=null)

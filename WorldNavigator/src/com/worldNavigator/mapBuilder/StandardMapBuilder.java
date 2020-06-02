@@ -49,6 +49,33 @@ public class StandardMapBuilder implements MapBuilder {
     }
 
     @Override
+    public void buildRoomWithLightSwitch(int roomNo, int row, int column) {
+        Room r = new RoomWithLightSwitch(roomNo,row,column);
+        m.addRoom(r);
+
+        r.setSide(Direction.West,new Wall());
+        r.setSide(Direction.South,new Wall());
+        r.setSide(Direction.East,new Wall());
+        r.setSide(Direction.North,new Wall());
+    }
+
+    @Override
+    public void buildDarkRoom(int roomNo, int row, int column) {
+        Room r=new Room(roomNo,row,column,true);
+        m.addRoom(r);
+
+        r.setSide(Direction.West,new Wall());
+        r.setSide(Direction.South,new Wall());
+        r.setSide(Direction.East,new Wall());
+        r.setSide(Direction.North,new Wall());
+    }
+
+    @Override
+    public Room getRoom(int roomNo) {
+        return m.getRoom(roomNo);
+    }
+
+    @Override
     public void buildDoor(int r1, int r2) {
         Room fromRoom=m.getRoom(r1);
         Room toRoom=m.getRoom(r2);
@@ -95,6 +122,20 @@ public class StandardMapBuilder implements MapBuilder {
     }
 
     @Override
+    public void buildExitDoor(Direction direction, int roomNo) {
+        Room r= m.getRoom(roomNo);
+        ExitDoor d = new ExitDoor(getWallObject(roomNo,direction),r);
+        r.setSide(direction,d);
+    }
+
+    @Override
+    public void buildLockedExitDoor(Direction direction, int roomNo, Key key) {
+        Room r= m.getRoom(roomNo);
+        ExitDoor d= new ExitDoor(getWallObject(roomNo,direction),r, key);
+        r.setSide(direction,d);
+    }
+
+    @Override
     public void setStartRoom(int roomNo) {
         m.setStartRoom(roomNo);
     }
@@ -109,6 +150,11 @@ public class StandardMapBuilder implements MapBuilder {
         Room room = m.getRoom(roomNo);
         Wall painting= new Painting(room.getSide(direction));
         room.setSide(direction, painting);
+    }
+
+    @Override
+    public void buildKeyInPainting(Painting painting, Key key) {
+        painting.hideKey(key);
     }
 
     @Override
