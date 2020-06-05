@@ -10,8 +10,7 @@ public class Timer extends Thread {
         this.durationOfGame=durationOfGame;
     }
 
-    public void runTimer() {
-            start();
+    public void run() {
         try {
             Thread.sleep(durationOfGame);
         } catch (InterruptedException e) {

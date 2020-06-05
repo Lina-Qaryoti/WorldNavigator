@@ -38,7 +38,7 @@ public class Map {
 
     public void startTimer(){
 
-        timer.runTimer();
+        timer.start();
     }
 
     public void addRoom(Room room){
