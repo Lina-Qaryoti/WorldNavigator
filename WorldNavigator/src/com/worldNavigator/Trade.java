@@ -1,5 +1,6 @@
 package com.worldNavigator;
 
+import com.worldNavigator.Items.Inventory;
 import com.worldNavigator.Items.Item;
 import com.worldNavigator.Items.SoldKey;
 import com.worldNavigator.mapObjects.Player;
@@ -61,7 +62,8 @@ public class Trade {
         if(canTrade()) {
             Scanner sc= new Scanner(System.in);
             int itemNum=sc.nextInt();
-            if (seller.getSellerInventory().inRange(itemNum)) {
+            Inventory sellerInventory =seller.getSellerInventory();
+            if (sellerInventory.inRange(itemNum)) {
                 canBuy(player,seller,itemNum);
             }
             else
@@ -70,13 +72,15 @@ public class Trade {
     }
 
     private void canBuy( Player player, Seller seller, int itemNum){
-        Item object = seller.getSellerInventory().getItem(itemNum);
+        Inventory sellerInventory= seller.getSellerInventory();
+        Inventory playerInventory= player.getPlayerInventory();
+        Item object = sellerInventory.getItem(itemNum);
         double price = getPrice(object);
         if (player.getGold() < price)
             System.out.println("Return when you have enough gold");
         else {
-            seller.getSellerInventory().removeFromInventory(object);
-            player.getPlayerInventory().addItem(object);
+            sellerInventory.removeFromInventory(object);
+            playerInventory.addItem(object);
             player.transaction(-price);
             System.out.println(object.getDescription() + " bought and acquired");
         }
@@ -84,10 +88,11 @@ public class Trade {
 
     public void Sell( Player player, Seller seller){
         if(canTrade()) {
+            Inventory playerInventory= player.getPlayerInventory();
             listItemPrices();
             Scanner sc= new Scanner(System.in);
             int itemNum=sc.nextInt();
-            if (player.getPlayerInventory().inRange(itemNum)) {
+            if (playerInventory.inRange(itemNum)) {
                 canSell(player,seller,itemNum);
             }
             else
@@ -96,10 +101,12 @@ public class Trade {
     }
 
     private void canSell(Player player, Seller seller, int itemNum){
-        Item object = player.getPlayerInventory().getItem(itemNum);
+        Inventory sellerInventory= seller.getSellerInventory();
+        Inventory playerInventory= player.getPlayerInventory();
+        Item object = playerInventory.getItem(itemNum);
         double price = getPrice(object);
-        seller.getSellerInventory().addItem(object);
-        player.getPlayerInventory().removeFromInventory(object);
+        sellerInventory.addItem(object);
+        playerInventory.removeFromInventory(object);
         player.transaction(price);
         System.out.println(object.getDescription() + " sold");
     }

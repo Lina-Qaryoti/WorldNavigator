@@ -84,7 +84,8 @@ public class Player extends Exception {
     }
 
     public void moveBackward() throws WinningException {
-        MapObjects obj= currentRoom.getSide(playerOrientation.getBackwardsDirection());
+        Direction backwardsDirection=playerOrientation.getBackwardsDirection();
+        MapObjects obj= currentRoom.getSide(backwardsDirection);
         if(obj instanceof GenericDoor){
             if(obj instanceof ExitDoor) {
                 throw new WinningException();
@@ -116,10 +117,11 @@ public class Player extends Exception {
     public void Check(){
         if(!currentRoom.getSide(playerOrientation).isCheckable()) {
             System.out.println("This object cannot be checked");
-            return;
         }
         else{
-            List<Item> itemsFound= currentRoom.getSide(playerOrientation).checkObject();
+            Wall playerView =currentRoom.getSide(playerOrientation);
+
+            List<Item> itemsFound= playerView.checkObject();
             for( Item item : itemsFound){
                 if(item.getClass()==Gold.class)
                     transaction(((Gold) item).getAmount());
@@ -170,7 +172,8 @@ public class Player extends Exception {
        if(!trading.isTradingMode()){
            if(currentRoom.getSide(playerOrientation) instanceof Seller){
                trading.setTradingMode(true);
-               ((Seller) currentRoom.getSide(playerOrientation)).listItems();
+               Seller seller= (Seller) currentRoom.getSide(playerOrientation);
+               seller.listItems();
            }
            else{
                System.out.println("Cannot trade this object");
@@ -182,15 +185,18 @@ public class Player extends Exception {
     }
 
     public void Buy(){
-        trading.Buy(this,(Seller)currentRoom.getSide(playerOrientation));
+        Seller seller= (Seller) currentRoom.getSide(playerOrientation);
+        trading.Buy(this,seller);
     }
 
     public void Sell(){
-        trading.Sell(this,(Seller)currentRoom.getSide(playerOrientation));
+        Seller seller= (Seller) currentRoom.getSide(playerOrientation);
+        trading.Sell(this,seller);
     }
 
     public void List(){
-        trading.List((Seller)currentRoom.getSide(playerOrientation));
+        Seller seller= (Seller) currentRoom.getSide(playerOrientation);
+        trading.List(seller);
     }
 
     public void finishTrade(){
