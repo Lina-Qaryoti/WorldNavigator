@@ -77,6 +77,7 @@ public class Game {
                     return false;
                 }
 
+
                 if(e.getTargetException().getClass().equals(LosingException.class)){
                     loseGame();
                     return false;

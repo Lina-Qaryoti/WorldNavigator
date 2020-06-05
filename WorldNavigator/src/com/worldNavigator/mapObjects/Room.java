@@ -8,7 +8,7 @@ public class Room {
 
     private int roomNO;
     private int row,column;
-    private Wall[] sides= new Wall[4];
+    private Wall[] sidesOfRoom = new Wall[4];
     boolean darkRoom;
     // 0 for north, 1 for east, 2 for south, 3 for west
 
@@ -52,7 +52,7 @@ public class Room {
     public Wall getSide(Direction d) {
 
         if(d!=null)
-            return sides[d.ordinal()];
+            return sidesOfRoom[d.ordinal()];
         else
             throw new IllegalArgumentException();
     }
@@ -69,7 +69,7 @@ public class Room {
 
     public void setSide(Direction d, Wall obj){
         if(d!=null)
-            sides[d.ordinal()]=obj;
+            sidesOfRoom[d.ordinal()]=obj;
         else
             throw new InvalidParameterException("Direction does not exist");
     }

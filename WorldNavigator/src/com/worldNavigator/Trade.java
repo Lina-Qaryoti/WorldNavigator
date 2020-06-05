@@ -62,19 +62,23 @@ public class Trade {
             Scanner sc= new Scanner(System.in);
             int itemNum=sc.nextInt();
             if (seller.getSellerInventory().inRange(itemNum)) {
-                Item object = seller.getSellerInventory().getItem(itemNum);
-                double price = getPrice(object);
-                if (player.getGold() < price)
-                    System.out.println("Return when you have enough gold");
-                else {
-                    seller.getSellerInventory().removeFromInventory(object);
-                    player.getPlayerInventory().addItem(object);
-                    player.transaction(-price);
-                    System.out.println(object.getDescription() + " bought and acquired");
-                }
+                canBuy(player,seller,itemNum);
             }
             else
                 System.out.println("Item number not in range");
+        }
+    }
+
+    private void canBuy( Player player, Seller seller, int itemNum){
+        Item object = seller.getSellerInventory().getItem(itemNum);
+        double price = getPrice(object);
+        if (player.getGold() < price)
+            System.out.println("Return when you have enough gold");
+        else {
+            seller.getSellerInventory().removeFromInventory(object);
+            player.getPlayerInventory().addItem(object);
+            player.transaction(-price);
+            System.out.println(object.getDescription() + " bought and acquired");
         }
     }
 
@@ -84,16 +88,20 @@ public class Trade {
             Scanner sc= new Scanner(System.in);
             int itemNum=sc.nextInt();
             if (player.getPlayerInventory().inRange(itemNum)) {
-                Item object = player.getPlayerInventory().getItem(itemNum);
-                double price = getPrice(object);
-                seller.getSellerInventory().addItem(object);
-                player.getPlayerInventory().removeFromInventory(object);
-                player.transaction(price);
-                System.out.println(object.getDescription() + " sold");
+                canSell(player,seller,itemNum);
             }
             else
                 System.out.println("Item number not in range");
         }
+    }
+
+    private void canSell(Player player, Seller seller, int itemNum){
+        Item object = player.getPlayerInventory().getItem(itemNum);
+        double price = getPrice(object);
+        seller.getSellerInventory().addItem(object);
+        player.getPlayerInventory().removeFromInventory(object);
+        player.transaction(price);
+        System.out.println(object.getDescription() + " sold");
     }
 
     public void List(Seller seller){
