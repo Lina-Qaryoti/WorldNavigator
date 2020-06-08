@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class Inventory {
-    private List<Item> inventory = new ArrayList<Item>();
+    private List<Item> inventory = new ArrayList<>();
 
     public void addItem(Item item){
         inventory.add(item);
@@ -31,7 +31,7 @@ public class Inventory {
        inventory.remove(item);
     }
 
-    public void listItemswithPrices(Trade prices){
+    public void listItemsWithPrices(Trade prices){
         for( Item item : inventory){
             System.out.println(item.getDescription()+" Price: "+prices.getPrice(item));
         }
@@ -57,8 +57,7 @@ public class Inventory {
 
     public Item getItem(int num){
         if(inRange(num)){
-            Item obj= inventory.get(num-1);
-            return obj;
+            return inventory.get(num-1);
         }
         else
             return null;

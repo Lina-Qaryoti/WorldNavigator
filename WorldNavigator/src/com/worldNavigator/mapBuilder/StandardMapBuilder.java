@@ -1,10 +1,7 @@
 package com.worldNavigator.mapBuilder;
 
 import com.worldNavigator.Direction;
-import com.worldNavigator.Items.Inventory;
-import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.Key;
-import com.worldNavigator.Items.SoldKey;
+import com.worldNavigator.Items.*;
 import com.worldNavigator.mapObjects.*;
 
 import java.security.InvalidParameterException;
@@ -167,7 +164,7 @@ public class StandardMapBuilder implements MapBuilder {
 
     @Override
     public void buildSellerInventory() {
-        sellerInventory= new ArrayList<Item>();
+        sellerInventory= new ArrayList<>();
     }
 
     @Override
@@ -223,7 +220,7 @@ public class StandardMapBuilder implements MapBuilder {
 
     @Override
     public void buildChestInventory() {
-        chestInventory= new ArrayList<Item>();
+        chestInventory= new ArrayList<>();
     }
 
     @Override

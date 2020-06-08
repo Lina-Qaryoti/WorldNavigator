@@ -1,7 +1,6 @@
 package com.worldNavigator.mapObjects;
 
 import com.worldNavigator.Direction;
-
 import java.security.InvalidParameterException;
 
 public class Room {
@@ -78,10 +77,7 @@ public class Room {
     public boolean equals(Object o) {
 
         if( o instanceof Room){
-            if(this.roomNO==((Room) o).roomNO)
-                return true;
-            else
-                return false;
+            return this.roomNO == ((Room) o).roomNO;
         }
         else
             throw new InvalidParameterException("Cannot compare this object with room");

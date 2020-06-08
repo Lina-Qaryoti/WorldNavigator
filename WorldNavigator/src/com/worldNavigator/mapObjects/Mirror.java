@@ -1,7 +1,6 @@
 package com.worldNavigator.mapObjects;
 
-import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.Key;
+import com.worldNavigator.Items.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +17,7 @@ public class Mirror extends WallDecorator {
     }
 
     public boolean hasKey(){
-        if (key!=null)
-            return true;
-        return false;
+        return key != null;
     }
 
     @Override
@@ -35,7 +32,7 @@ public class Mirror extends WallDecorator {
 
     @Override
     public List<Item> checkObject(){
-        List <Item> items= new ArrayList<Item>();
+        List <Item> items= new ArrayList<>();
         if(hasKey()) {
             items.add(key);
             System.out.println("The "+key.getName()+" key was acquired");

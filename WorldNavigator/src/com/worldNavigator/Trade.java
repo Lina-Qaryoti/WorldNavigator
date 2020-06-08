@@ -1,14 +1,9 @@
 package com.worldNavigator;
 
-import com.worldNavigator.Items.Inventory;
-import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.SoldKey;
-import com.worldNavigator.mapObjects.Player;
-import com.worldNavigator.mapObjects.Seller;
+import com.worldNavigator.Items.*;
+import com.worldNavigator.mapObjects.*;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Trade {
     private HashMap<Class<? extends Item>, Double> itemsPrices = new HashMap<>();
@@ -58,7 +53,7 @@ public class Trade {
     }
 
 
-    public void Buy( Player player, Seller seller){
+    public void buy(Player player, Seller seller){
         if(canTrade()) {
             Scanner sc= new Scanner(System.in);
             int itemNum=sc.nextInt();
@@ -86,7 +81,7 @@ public class Trade {
         }
     }
 
-    public void Sell( Player player, Seller seller){
+    public void sell(Player player, Seller seller){
         if(canTrade()) {
             Inventory playerInventory= player.getPlayerInventory();
             listItemPrices();
@@ -111,7 +106,7 @@ public class Trade {
         System.out.println(object.getDescription() + " sold");
     }
 
-    public void List(Seller seller){
+    public void list(Seller seller){
         if(canTrade())
             seller.listItems();
     }

@@ -1,7 +1,6 @@
 package com.worldNavigator.mapObjects;
 
-import com.worldNavigator.Items.Inventory;
-import com.worldNavigator.Items.Item;
+import com.worldNavigator.Items.*;
 import com.worldNavigator.Trade;
 import java.util.List;
 
@@ -29,6 +28,6 @@ public class Seller extends WallDecorator {
     }
 
     public void listItems(){
-        sellerInventory.listItemswithPrices(trading);
+        sellerInventory.listItemsWithPrices(trading);
     }
 }

@@ -1,7 +1,6 @@
 package com.worldNavigator.mapObjects;
 
 import com.worldNavigator.Items.Item;
-
 import java.util.List;
 
 public class Wall extends MapObjects {

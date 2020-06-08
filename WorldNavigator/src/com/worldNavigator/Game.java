@@ -1,12 +1,10 @@
 package com.worldNavigator;
 
-import com.worldNavigator.Exceptions.LosingException;
-import com.worldNavigator.Exceptions.WinningException;
+import com.worldNavigator.Exceptions.*;
 import com.worldNavigator.mapBuilder.*;
 import com.worldNavigator.mapObjects.Player;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.reflect.*;
 import java.util.Scanner;
 
 public class Game {
@@ -17,7 +15,6 @@ public class Game {
         Player newPlayer = Map1Builder.getInstance().buildLevel();
         System.out.println("Welcome to map1");
         while(commandTranslator(newPlayer));
-
     }
 
     public void startMap2(){

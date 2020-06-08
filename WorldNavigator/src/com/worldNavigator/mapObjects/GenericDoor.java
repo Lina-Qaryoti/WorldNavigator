@@ -1,9 +1,7 @@
 package com.worldNavigator.mapObjects;
 
 import com.worldNavigator.Items.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public abstract class GenericDoor extends WallDecorator {
 
@@ -67,7 +65,7 @@ public abstract class GenericDoor extends WallDecorator {
 
     @Override
     public List<Item> checkObject(){
-        List <Item> items= new ArrayList<Item>();
+        List <Item> items= new ArrayList<>();
         if(lock!=null && !isOpen())
             System.out.println("Door is locked, "+lock.getKey().getName()+" key is needed to unlock");
         else if(!isOpen())

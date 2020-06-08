@@ -1,11 +1,7 @@
 package com.worldNavigator.mapObjects;
 
 
-import com.worldNavigator.Items.Inventory;
-import com.worldNavigator.Items.Item;
-import com.worldNavigator.Items.Key;
-import com.worldNavigator.Items.Lock;
-
+import com.worldNavigator.Items.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,7 +77,7 @@ public class Chest extends WallDecorator {
 
     @Override
     public List<Item> checkObject(){
-        List <Item> items= new ArrayList<Item>();
+        List <Item> items= new ArrayList<>();
 
         if(!isOpen()){
             System.out.println("chest closed "+lock.getKey().getName()+" key is required to unlock");

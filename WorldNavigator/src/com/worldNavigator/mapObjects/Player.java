@@ -5,9 +5,7 @@ import com.worldNavigator.Items.*;
 import com.worldNavigator.Trade;
 import com.worldNavigator.Exceptions.WinningException;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 public class Player extends Exception {
     private Room currentRoom;
@@ -15,6 +13,23 @@ public class Player extends Exception {
     private Gold gold= new Gold(0.0);
     private Inventory playerInventory= new Inventory();
     private Trade trading;
+
+    public Player(double initialGold, Trade trading){
+        if(initialGold>=0)
+            gold.setAmount(initialGold);
+
+        playerOrientation=Direction.North;
+        this.trading=trading;
+    }
+
+    public Player(double initialGold, List<Item> items, Trade trading){
+        if(initialGold>=0)
+            gold.setAmount(initialGold);
+
+        playerInventory.addItems(items);
+        playerOrientation=Direction.North;
+        this.trading=trading;
+    }
 
     public double getGold() {
         return gold.getAmount();
@@ -37,22 +52,7 @@ public class Player extends Exception {
     }
 
 
-    public Player(double initialGold, Trade trading){
-        if(initialGold>=0)
-            gold.setAmount(initialGold);
 
-        playerOrientation=Direction.North;
-        this.trading=trading;
-    }
-
-    public Player(double initialGold, List<Item> items, Trade trading){
-        if(initialGold>=0)
-            gold.setAmount(initialGold);
-
-        playerInventory.addItems(items);
-        playerOrientation=Direction.North;
-        this.trading=trading;
-    }
 
 
     public void setCurrentRoom(Room currentRoom) {
@@ -105,7 +105,7 @@ public class Player extends Exception {
         playerOrientation=playerOrientation.getRightDirection();
     }
 
-    public void Look() throws WinningException{
+    public void look() throws WinningException{
         if(!canSee()){
             System.out.println("Dark");
         }
@@ -114,7 +114,7 @@ public class Player extends Exception {
         }
     }
 
-    public void Check(){
+    public void check(){
         if(!currentRoom.getSide(playerOrientation).isCheckable()) {
             System.out.println("This object cannot be checked");
         }
@@ -140,7 +140,7 @@ public class Player extends Exception {
         return flashlight.isPresent() && flashlight.get().isOn();
     }
 
-    public void useFlashLight(){
+    public void useFlashlight(){
 
         Optional<Flashlight> flashlight = playerInventory.getFlashlight();
         if(flashlight.isPresent()) {
@@ -150,14 +150,14 @@ public class Player extends Exception {
             System.out.println("No flashlight in inventory");
     }
 
-    public void SwitchLights(){
+    public void switchLights(){
         if(currentRoom instanceof RoomWithLightSwitch)
             ((RoomWithLightSwitch) currentRoom).switchLights();
         else
             System.out.println("Room does not have light switch");
     }
 
-    public void Open(){
+    public void open(){
         Wall object = currentRoom.getSide(playerOrientation);
         if(object instanceof GenericDoor){
             if(!((GenericDoor) object).isOpen())
@@ -168,7 +168,7 @@ public class Player extends Exception {
             System.out.println("Object cannot be opened");
     }
 
-    public void Trade(){
+    public void trade(){
        if(!trading.isTradingMode()){
            if(currentRoom.getSide(playerOrientation) instanceof Seller){
                trading.setTradingMode(true);
@@ -184,19 +184,19 @@ public class Player extends Exception {
        }
     }
 
-    public void Buy(){
+    public void buy(){
         Seller seller= (Seller) currentRoom.getSide(playerOrientation);
-        trading.Buy(this,seller);
+        trading.buy(this,seller);
     }
 
-    public void Sell(){
+    public void sell(){
         Seller seller= (Seller) currentRoom.getSide(playerOrientation);
-        trading.Sell(this,seller);
+        trading.sell(this,seller);
     }
 
-    public void List(){
+    public void list(){
         Seller seller= (Seller) currentRoom.getSide(playerOrientation);
-        trading.List(seller);
+        trading.list(seller);
     }
 
     public void finishTrade(){
