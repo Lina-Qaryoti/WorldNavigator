@@ -4,23 +4,25 @@ import com.worldNavigator.Exceptions.*;
 import com.worldNavigator.mapBuilder.*;
 import com.worldNavigator.mapObjects.Player;
 
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
 
     Scanner scan = new Scanner(System.in);
+    ArrayList<MapCreationTemplate> maps = new ArrayList<>();
 
-    public void startMap1(){
-        Player newPlayer = Map1Builder.getInstance().buildLevel();
-        System.out.println("Welcome to map1");
-        while(commandTranslator(newPlayer));
+    Game() {
+        maps.add(Map1Builder.getInstance());
+        maps.add(Map2Builder.getInstance());
     }
 
-    public void startMap2(){
-        Player newPlayer= Map2Builder.getInstance().buildLevel();
-        System.out.println("Welcome to map2");
-        while (commandTranslator(newPlayer));
+    public void startMap(int index) {
+        Player player = maps.get(index - 1).buildLevel();
+        System.out.println("Welcome to map #" + index);
+        while(commandTranslator(player));
     }
 
     private void winGame(){
@@ -37,8 +39,7 @@ public class Game {
         String confirm= scan.next();
         if(confirm.equals("Yes")){
             return true;
-        }
-        else
+        } else
             return false;
     }
 
@@ -91,21 +92,13 @@ public class Game {
     public boolean homePage(){
         System.out.println("Welcome to World Navigator");
         int mapNum;
-        while (true){
+        while(true) {
             System.out.println("Enter map number");
-            mapNum= scan.nextInt();
-            String mapName="Map"+mapNum+"Builder";
-            String className= "com.worldNavigator.mapBuilder."+mapName;
-            try {
-                Class.forName(className);
-                if(mapNum==1)
-                    startMap1();
-                else if(mapNum==2)
-                    startMap2();
-
+            mapNum = scan.nextInt();
+            if (mapNum > 0 && mapNum <= maps.size()) {
+                startMap(mapNum);
                 return restartGame();
-            }
-            catch (ClassNotFoundException e){
+            } else {
                 System.out.println("No such map exists");
             }
         }
