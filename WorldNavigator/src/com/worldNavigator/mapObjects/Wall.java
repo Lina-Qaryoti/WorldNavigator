@@ -5,21 +5,17 @@ import java.util.List;
 
 public class Wall extends MapObjects {
 
+  public Wall() {}
 
-    public Wall(){
+  public void getDescription() {
+    System.out.println("Wall");
+  }
 
-    }
+  public boolean isCheckable() {
+    return false;
+  }
 
-    public void getDescription(){
-        System.out.println("Wall");
-    }
-
-    public boolean isCheckable(){
-        return false;
-    }
-
-    public List<Item> checkObject(){
-        return null;
-    }
-
+  public List<Item> checkObject() {
+    return null;
+  }
 }

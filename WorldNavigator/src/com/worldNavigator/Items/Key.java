@@ -1,20 +1,19 @@
 package com.worldNavigator.Items;
 
 public class Key extends Item {
-    private String name;
 
-    public Key(String name){
-        this.name= name;
-    }
+  private String name;
 
-    public String getName(){
-        return name;
-    }
+  public Key(String name) {
+    this.name = name;
+  }
 
-    @Override
-    public String getDescription() {
-        return "Key "+getName();
-    }
+  public String getName() {
+    return name;
+  }
 
-
+  @Override
+  public String getDescription() {
+    return "Key " + getName();
+  }
 }

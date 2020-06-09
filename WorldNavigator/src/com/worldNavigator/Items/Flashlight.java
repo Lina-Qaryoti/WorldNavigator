@@ -1,22 +1,23 @@
 package com.worldNavigator.Items;
 
 public class Flashlight extends Item {
-    private boolean button;
 
-    public Flashlight(){
-        button= false;
-    }
+  private boolean button;
 
-    public boolean isOn(){
-        return button;
-    }
+  public Flashlight() {
+    button = false;
+  }
 
-    public void pressButton(){
-        button= !button;
-    }
+  public boolean isOn() {
+    return button;
+  }
 
-    @Override
-    public String getDescription() {
-       return "Flashlight";
-    }
+  public void pressButton() {
+    button = !button;
+  }
+
+  @Override
+  public String getDescription() {
+    return "Flashlight";
+  }
 }

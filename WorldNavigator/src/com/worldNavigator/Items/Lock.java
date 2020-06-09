@@ -1,40 +1,40 @@
 package com.worldNavigator.Items;
 
 public class Lock {
-    private Key key;
-    private boolean locked;
 
-    public Lock(Key key){
-        this.key=key;
-        locked =true;
-    }
+  private Key key;
+  private boolean locked;
 
-    public boolean isLocked(){
-        return locked;
-    }
+  public Lock(Key key) {
+    this.key = key;
+    locked = true;
+  }
 
-    public void lock(){
-        locked = true;
-    }
+  public boolean isLocked() {
+    return locked;
+  }
 
-    public void unlock(){
-        locked = false;
-    }
+  public void lock() {
+    locked = true;
+  }
 
-    public Key getKey(){
-        return key;
-    }
+  public void unlock() {
+    locked = false;
+  }
 
-    public boolean useKey(Key userKey){
-        if(userKey.equals(key)){
-            if(isLocked()){
-                unlock();
-            }
-            else{
-                lock();
-            }
-            return true;
-        }
-        return false;
+  public Key getKey() {
+    return key;
+  }
+
+  public boolean useKey(Key userKey) {
+    if (userKey.equals(key)) {
+      if (isLocked()) {
+        unlock();
+      } else {
+        lock();
+      }
+      return true;
     }
+    return false;
+  }
 }
