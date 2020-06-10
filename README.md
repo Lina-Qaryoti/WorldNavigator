@@ -22,7 +22,7 @@ To run the game just install it locally, and run the "RunGame" class which conta
 The player is placed in a map filled with rooms, and placed in one of them at start of game. The player must use different commands to check out objects placed in the room and transport to different rooms using doors that may or may not be locked. Keys are hidden in the rooms to open different map objects. The player wins when he exists a special door and loses if timer of room expires.
 
 ## Commands
-###Commands are **case sensitive**
+### Commands are **case sensitive**
 
 * **rotateLeft**  player turns to the left
 * **rotateRight** player turns to the right
