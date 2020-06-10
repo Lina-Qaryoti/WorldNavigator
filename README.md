@@ -11,7 +11,7 @@
 This project was made as part of the training program held by Atypon for Software Engineering and DevOps, the aim of this project is to test the skills of students half way through the training program in object oriented programming, desing principles, data structures, and clean coding.
 
 ## Technologies
-PRoject is created with:
+Project is created with:
 Intellij IDEA 2019.3.3 and uses Java JDK 1.8.0_241
 The google-java-format plugin was installed to aid in styling format defied by Google for java
 
