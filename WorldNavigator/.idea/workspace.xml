@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b11f3f3-99fe-47af-a591-c3bf98f4d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/WorldNavigator_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Items/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/Items/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Mirror.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Mirror.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Painting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Painting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WorldNavigator/com/worldNavigator/mapObjects/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapCreationTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worldNavigator/mapBuilder/MapDesigner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591653072258</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="reformat style using google">
+      <created>1591708205313</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591708205313</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +169,8 @@
     </ignored-roots>
     <MESSAGE value="clean coding update" />
     <MESSAGE value="clean coding update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean coding update2" />
+    <MESSAGE value="reformat style using google" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat style using google" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1591054736207">
@@ -193,18 +197,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590532606323" />
-    <state x="539" y="110" key="CommitChangelistDialog2" timestamp="1591653069849">
+    <state x="539" y="110" key="CommitChangelistDialog2" timestamp="1591804453988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="539" y="110" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591653069849" />
+    <state x="539" y="110" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591804453988" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1591375374615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591375374615" />
-    <state x="1209" y="267" key="FileChooserDialogImpl" timestamp="1591657385093">
+    <state x="1209" y="267" key="FileChooserDialogImpl" timestamp="1591797350356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1209" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591657385093" />
+    <state x="1209" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591797350356" />
     <state width="1877" height="198" key="GridCell.Tab.0.bottom" timestamp="1591652415433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,14 +249,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="104" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591707813326" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591653076856">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1591708210255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591653076856" />
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1591708089799">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591708210255" />
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1591797297480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591708089799" />
+    <state x="423" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591797297480" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591653641221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -265,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-7" y="520" width="975" height="527" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1589845072377" />
-    <state x="342" y="140" key="new project wizard" timestamp="1591627424907">
+    <state x="342" y="140" key="new project wizard" timestamp="1591797352667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591627424907" />
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591797352667" />
     <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1590792590256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

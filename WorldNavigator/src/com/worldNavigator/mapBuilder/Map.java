@@ -12,7 +12,7 @@ public class Map {
   private Room[][] rooms;
   private Room startRoom;
   private Trade trading;
-  private Timer timer;
+  private long mapDuration;
 
   public void setItemPrice(Class<? extends Item> object, Double price) {
     trading.put(object, price);
@@ -30,12 +30,11 @@ public class Map {
   }
 
   public void setGameDuration(long durationOfGame) {
-    timer = new Timer(durationOfGame);
+    mapDuration = durationOfGame;
   }
 
-  public void startTimer() {
-
-    timer.start();
+  public long getMapDuration() {
+    return mapDuration;
   }
 
   public void addRoom(Room room) {

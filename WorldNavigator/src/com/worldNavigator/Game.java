@@ -20,6 +20,7 @@ public class Game {
 
   public void startMap(int index) {
     Player player = maps.get(index - 1).buildLevel();
+    long time = maps.get(index - 1).getDurationOfGame();
     System.out.println("Welcome to map #" + index);
     while (commandTranslator(player)) {;
     }

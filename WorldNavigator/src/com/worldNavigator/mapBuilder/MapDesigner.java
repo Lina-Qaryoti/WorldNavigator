@@ -7,7 +7,6 @@ import com.worldNavigator.Items.*;
 public class MapDesigner {
 
   public static Map getMap1(MapBuilder mb) {
-
     mb.buildMap(2, 2);
     mb.buildRoom(1, 0, 0);
     mb.setStartRoom(1);

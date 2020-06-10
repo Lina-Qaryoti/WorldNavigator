@@ -5,14 +5,20 @@ import com.worldNavigator.mapObjects.Player;
 
 public abstract class MapCreationTemplate {
 
+  private long durationOfGame;
+
   public final Player buildLevel() {
     MapBuilder builder = createMapBuilder();
     Map map = createMap(builder);
     map.printMap();
+    durationOfGame = map.getMapDuration();
     Player player = createPlayer(map.getTrading());
     player.setCurrentRoom(map.getStartRoom());
-    // map.startTimer();
     return player;
+  }
+
+  public long getDurationOfGame() {
+    return durationOfGame;
   }
 
   protected abstract MapBuilder createMapBuilder();
