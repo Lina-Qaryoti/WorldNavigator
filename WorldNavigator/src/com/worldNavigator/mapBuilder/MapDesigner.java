@@ -10,7 +10,7 @@ public class MapDesigner {
     mb.buildMap(2, 2);
     mb.buildRoom(1, 0, 0);
     mb.setStartRoom(1);
-    mb.setMapDuration(6000); // 3 minutes
+    mb.setMapDuration(3000); // 1 minute
     mb.buildRoom(2, 0, 1);
     mb.buildDoor(1, 2);
     mb.buildMirror(2, Direction.North);

@@ -12,6 +12,7 @@ public class Game {
 
   Scanner scan = new Scanner(System.in);
   ArrayList<MapCreationTemplate> maps = new ArrayList<>();
+  boolean timerDone = false;
 
   Game() {
     maps.add(Map1Builder.getInstance());
@@ -20,10 +21,10 @@ public class Game {
 
   public void startMap(int index) {
     Player player = maps.get(index - 1).buildLevel();
-    long time = maps.get(index - 1).getDurationOfGame();
     System.out.println("Welcome to map #" + index);
-    while (commandTranslator(player)) {;
-    }
+    Timer timer = new Timer(maps.get(index - 1).getDurationOfGame(), this);
+    timer.start();
+    while (commandTranslator(player)) {}
   }
 
   private void winGame() {
@@ -38,11 +39,7 @@ public class Game {
     System.out.println("Would you like to restart game?");
     System.out.println("Enter Yes | No ?");
     String confirm = scan.next();
-    if (confirm.equals("Yes")) {
-      return true;
-    } else {
-      return false;
-    }
+    return confirm.equals("Yes");
   }
 
   private boolean isValidCommand(String command) {
@@ -55,6 +52,10 @@ public class Game {
   }
 
   private boolean commandTranslator(Player player) {
+    if (timerDone) {
+      loseGame();
+      return false;
+    }
     String command = scan.next();
     if (command.equals("quit") || command.equals("restart")) {
       loseGame();
@@ -68,14 +69,9 @@ public class Game {
 
       } catch (NoSuchMethodException | IllegalAccessException e) {
         System.out.println("Invalid command");
-      } catch (InvocationTargetException e) { // catches custom excpetions
+      } catch (InvocationTargetException e) {
         if (e.getTargetException().getClass().equals(WinningException.class)) {
           winGame();
-          return false;
-        }
-
-        if (e.getTargetException().getClass().equals(LosingException.class)) {
-          loseGame();
           return false;
         }
       }
@@ -99,5 +95,9 @@ public class Game {
         System.out.println("No such map exists");
       }
     }
+  }
+
+  public void endTimer() {
+    timerDone = true;
   }
 }
